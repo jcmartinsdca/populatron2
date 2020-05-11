@@ -1,14 +1,18 @@
 function csvParser(lines) {
 
-    var pCntr = 5
+    var pCntr = 4
     var pNumTotal = 0
     
-    for(var cnt=1; cnt < 10; cnt++) {
+    for(var cnt=1; cnt < lines.length; cnt++) {
         const keys = lines[cnt].split(',')
     
-        pNum = parseFloat(keys[pCntr], 30)
+        pNum = parseInt(keys[pCntr])
+        if(isNaN(pNum)) {
+            pNum =0
+        }else {
         //console.log(pNum)
         pNumTotal += pNum   
+        }
     }
     console.log(pNumTotal)
     return(pNumTotal)
