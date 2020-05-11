@@ -8,7 +8,7 @@ test('testing readfile', function() {
     expect(lines != null)
 })
 
-test('testing readfile', function() {
+test('testing the parser to add up the popluation and thtat the results match', function() {
     var  popnum = tcsvParser(lines);
     expect(popnum >1 )
 })
